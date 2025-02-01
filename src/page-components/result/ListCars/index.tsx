@@ -19,7 +19,7 @@ const ListCarsComponent = async ({ makeId, year }: ListCarsProps) => {
       <h2 className="text-2xl font-bold">{data.SearchCriteria}</h2>
 
       <ul className="flex flex-col w-full mt-10">
-        <li className="grid grid-cols-3 gap-10 border-b-2 border-gray-base bg-white-base p-2.5F">
+        <li className="grid grid-cols-3 gap-10 border-b-2 border-gray-base bg-white-base p-2.5">
           <span className="justify-self-start">Make Name</span>
           <span className="justify-self-center">Model ID</span>
           <span className="justify-self-end">Model Name</span>
