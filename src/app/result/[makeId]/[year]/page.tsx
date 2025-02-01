@@ -29,8 +29,12 @@ export async function generateStaticParams() {
   }
 }
 
-const Result = ({ params }: { params: { makeId: string; year: string } }) => {
-  const { makeId, year } = params;
+const Result = async ({
+  params,
+}: {
+  params: Promise<{ makeId: string; year: string }>;
+}) => {
+  const { makeId, year } = await params;
 
   return (
     <section className="container py-20">
