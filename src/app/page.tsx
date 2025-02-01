@@ -10,7 +10,7 @@ const Home = async () => {
   );
 
   return (
-    <section className="container flex h-full flex-col items-center gap-10 py-20">
+    <section className="container flex h-full flex-col items-center gap-10 py-40">
       <Title />
       <Controls cars={data.Results} />
     </section>
