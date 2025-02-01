@@ -27,12 +27,10 @@ export const Controls: FC<Props> = ({ cars }) => {
 
   const isDisabled = !makeIdOption || !yearOption;
 
-  const hrefResult =
-    !isDisabled &&
-    getItemPath(PATHNAMES.RESULT, {
-      makeId: makeIdOption?.value,
-      year: yearOption?.value,
-    });
+  const hrefResult = !isDisabled ? getItemPath(PATHNAMES.RESULT, {
+    makeId: makeIdOption?.value,
+    year: yearOption?.value,
+  }) : "";
 
   const handleReset = () => {
     setYearOption(null);
@@ -60,16 +58,18 @@ export const Controls: FC<Props> = ({ cars }) => {
       </div>
 
       <div className="flex gap-10">
-        <Button
-          className="flex-1"
-          variant={ButtonVariants.PRIMARY}
-          isDisabled={isDisabled}
-        >
-          {hrefResult ? <Link href={hrefResult}>Next</Link> : <span>Next</span>}
-        </Button>
+        <Link className="w-1/2" href={hrefResult}>
+          <Button
+            className="w-full"
+            variant={ButtonVariants.PRIMARY}
+            isDisabled={isDisabled}
+          >
+            Next
+          </Button>
+        </Link>
 
         <Button
-          className="flex-1"
+          className="w-1/2"
           onClick={handleReset}
           variant={ButtonVariants.SECONDARY}
         >

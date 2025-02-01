@@ -1,7 +1,7 @@
 import cn from "classnames";
 import { ButtonVariants } from "./types";
 
-const DEFAULT_BUTTON_CLASSNAME = "rounded-lg text-lg font-bold px-10";
+const DEFAULT_BUTTON_CLASSNAME = "rounded-lg text-lg font-bold px-10 py-2";
 
 export const BUTTON_STYLE_VARIANTS = {
   [ButtonVariants.PRIMARY]: cn(
