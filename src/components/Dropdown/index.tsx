@@ -24,7 +24,7 @@ export const Dropdown: FC<Props> = ({
   const onClose = () => setIsOpen(false);
   const toggleIsOpen = () => setIsOpen((prev) => !prev);
 
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
   useClickOutside(dropdownRef, onClose);
 
   return (

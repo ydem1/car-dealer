@@ -4,7 +4,7 @@ import { RefObject, useCallback, useEffect } from "react";
 import { ROOT_ELEMENT } from "@/constants/rootElements";
 
 export const useClickOutside = (
-  ref: RefObject<HTMLElement>,
+  ref: RefObject<HTMLDivElement | null>,
   callback: VoidFunction,
   isActive: boolean = true
 ) => {
