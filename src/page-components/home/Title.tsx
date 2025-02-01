@@ -1,1 +1,1 @@
-export const Title = () => <h1>Car Dealer App</h1>;
+export const Title = () => <h1 className="text-center">Car Dealer App</h1>;

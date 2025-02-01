@@ -12,15 +12,15 @@ input {
 }
 
 h1 {
-  @apply text-5xl font-bold text-gray-base;
+  @apply text-3xl md:text-5xl font-bold text-gray-base;
 }
 
 h2 {
-  @apply text-4xl font-bold text-gray-base;
+  @apply text-2xl md:text-4xl font-bold text-gray-base;
 }
 
 p {
-  @apply text-lg text-gray-base;
+  @apply text-sm xs:text-lg text-gray-base;
 }
 
 .container {

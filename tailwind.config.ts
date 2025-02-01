@@ -20,6 +20,10 @@ const config: Config = {
         200: "800px",
         360: "1440px",
       },
+      screens: {
+        xs: "450px",
+        md: "720px",
+      },
     },
   },
   plugins: [],

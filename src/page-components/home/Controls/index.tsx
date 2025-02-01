@@ -41,7 +41,7 @@ export const Controls: FC<Props> = ({ cars }) => {
 
   return (
     <div className="flex w-full max-w-200 flex-col gap-12">
-      <div className="flex gap-10">
+      <div className="flex flex-col md:flex-row gap-10">
         <DropdownSelector
           className="flex-1"
           headLabel="Make"
