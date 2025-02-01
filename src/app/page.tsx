@@ -1,5 +1,5 @@
 import { instance } from "@/services/api-client";
-// import { Controls } from "@/page-components/home/Controls";
+import { Controls } from "@/page-components/home/Controls";
 import { Title } from "@/page-components/home/Title";
 import { IResponseData } from "@/@types/api";
 import { ICar } from "@/@types/car";
@@ -9,12 +9,10 @@ const Home = async () => {
     "/GetMakesForVehicleType/car?format=json"
   );
 
-  console.log(data);
-
   return (
     <section className="container flex h-full flex-col items-center gap-10 py-20">
       <Title />
-      {/* <Controls cars={data.Results} /> */}
+      <Controls cars={data.Results} />
     </section>
   );
 };
