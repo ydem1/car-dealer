@@ -9,11 +9,11 @@ import { generateYearOptions } from "@/utils/generateYearOptions";
 import { getItemPath } from "@/utils/getItemPath";
 import { PATHNAMES } from "@/constants/routes";
 import { IOptionSelect } from "@/@types";
-import { ICar } from "@/@types/car";
+import { IMake } from "@/@types/make";
 import { DropdownSelector } from "./DropdownSelector";
 
 interface Props {
-  cars: ICar[];
+  cars: IMake[];
 }
 
 export const Controls: FC<Props> = ({ cars }) => {

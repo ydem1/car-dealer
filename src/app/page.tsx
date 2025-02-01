@@ -2,10 +2,10 @@ import { instance } from "@/services/api-client";
 import { Controls } from "@/page-components/home/Controls";
 import { Title } from "@/page-components/home/Title";
 import { IResponseData } from "@/@types/api";
-import { ICar } from "@/@types/car";
+import { IMake } from "@/@types/make";
 
 const Home = async () => {
-  const { data } = await instance.get<IResponseData<ICar[]>>(
+  const { data } = await instance.get<IResponseData<IMake[]>>(
     "/GetMakesForVehicleType/car?format=json"
   );
 

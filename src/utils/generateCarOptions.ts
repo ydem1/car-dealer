@@ -1,7 +1,7 @@
 import { IOptionSelect } from "@/@types";
-import { ICar } from "@/@types/car";
+import { IMake } from "@/@types/make";
 
-export const generateCarOptions = (cars: ICar[]): IOptionSelect[] => {
+export const generateCarOptions = (cars: IMake[]): IOptionSelect[] => {
   return cars.map((car, index) => ({
     id: index,
     value: car.MakeId,

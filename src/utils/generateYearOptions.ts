@@ -1,5 +1,3 @@
-"use client";
-
 import { IOptionSelect } from "@/@types";
 
 export const generateYearOptions = (): IOptionSelect[] => {
