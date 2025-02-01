@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vehicle Information Application
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This application allows users to select a vehicle's make and year from dropdown lists and view detailed information about available car models for the selected make and year. The application fetches the data from an external API and presents it in a user-friendly format. It features dropdown menus for selecting the make and year, with a "Next" button to display the results, and a "Reset" button to clear the selections.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Features:
+- **Make and Year Selection:** Dropdown lists to select the vehicle make and model year.
+- **Next Button:** Navigates to the results page showing details of cars based on the selected make and year.
+- **Reset Button:** Clears the selected options.
+- **Dynamic Table:** Displays car details such as Make Name, Model ID, and Model Name for each vehicle.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Architecture
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application is built using **Next.js**, a React-based framework, and uses API calls to fetch data for vehicle makes and models. It is structured as follows:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Home Page:**
+   - Displays two dropdown selectors: one for selecting a car make, and another for selecting the car's model year.
+   - After making selections, users can click "Next" to view the available cars for the selected make and year on the results page.
+   - The "Reset" button clears both the make and year selections.
+  ![alt text](image-1.png)
 
-## Learn More
+2. **Result Page:**
+   - After the "Next" button is clicked, users are redirected to a page that displays a table of cars.
+   - The table shows details such as the Make Name, Model ID, and Model Name for each car model for the selected make and year.
+![alt text](image-2.png)
 
-To learn more about Next.js, take a look at the following resources:
+## How to Run and Build the Application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Before running the application, ensure you have the following installed:
+- **Node.js** (LTS version recommended)
+- **npm** or **yarn** (a package manager)
 
-## Deploy on Vercel
+### Steps to Run the Application
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   git clone https://github.com/ydem1/car-dealer.git
+   cd car-dealer
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   or
+   yarn install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   or
+   yarn dev
+   ```
+
+### Steps to Build the Application
+
+1. **Build the application for production:**
+
+   ```bash
+   npm run build
+   or
+   yarn build
+   ```
+
+2. **Build the application for production:**
+
+   ```bash
+   npm run dev
+   or
+   yarn dev
+   ```
