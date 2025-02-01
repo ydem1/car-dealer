@@ -2,10 +2,10 @@
 
 import React, { FC, useState } from "react";
 import Image from "next/image";
+import { IOptionSelect, SetOptionSelect } from "@/@types";
 import cn from "classnames";
 import { Dropdown } from "@/components/Dropdown";
 import { IMAGES_ALTS } from "@/constants/imageAlts";
-import { IOptionSelect, SetOptionSelect } from "@/@types";
 import arrowIcon from "@/assets/icons/arrow.svg";
 import { SortOption } from "./SortOption";
 

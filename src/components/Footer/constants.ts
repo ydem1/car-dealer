@@ -1,9 +1,9 @@
 import { ILink } from "@/@types";
+import Email from "@/assets/icons/email.svg";
 import GitHub from "@/assets/icons/github.svg";
+import Instagram from "@/assets/icons/instagram.svg";
 import LinkedIn from "@/assets/icons/linkedin.svg";
 import Telegram from "@/assets/icons/telegram.svg";
-import Email from "@/assets/icons/email.svg";
-import Instagram from "@/assets/icons/instagram.svg";
 
 export const SOCIAL_MEDIA_LINKS: ILink[] = [
   {

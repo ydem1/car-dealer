@@ -2,13 +2,13 @@
 
 import { FC, useState } from "react";
 import Link from "next/link";
+import { IOptionSelect } from "@/@types";
 import { Button } from "@/components/Button";
 import { ButtonVariants } from "@/components/Button/types";
 import { generateCarOptions } from "@/utils/generateCarOptions";
 import { generateYearOptions } from "@/utils/generateYearOptions";
 import { getItemPath } from "@/utils/getItemPath";
 import { PATHNAMES } from "@/constants/routes";
-import { IOptionSelect } from "@/@types";
 import { IMake } from "@/@types/make";
 import { DropdownSelector } from "./DropdownSelector";
 
@@ -41,7 +41,7 @@ export const Controls: FC<Props> = ({ cars }) => {
 
   return (
     <div className="flex w-full max-w-200 flex-col gap-12">
-      <div className="flex flex-col md:flex-row gap-10">
+      <div className="flex flex-col gap-10 md:flex-row">
         <DropdownSelector
           className="flex-1"
           headLabel="Make"

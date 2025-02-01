@@ -1,8 +1,8 @@
-import { ICar } from "@/@types/car";
-import { IResponseData } from "@/@types/api";
-import { instance } from "@/services/api-client";
 import { FC, Suspense } from "react";
+import { instance } from "@/services/api-client";
 import cn from "classnames";
+import { IResponseData } from "@/@types/api";
+import { ICar } from "@/@types/car";
 
 interface ListCarsProps {
   makeId: string;
@@ -24,7 +24,7 @@ const ListCarsComponent = async ({ makeId, year }: ListCarsProps) => {
     <div>
       <h2 className="text-2xl font-bold">{data.SearchCriteria}</h2>
 
-      <ul className="flex flex-col mt-10">
+      <ul className="mt-10 flex flex-col">
         <li className="grid grid-cols-3 items-center gap-10 border-b-2 border-gray-base bg-white-base p-2.5">
           <p className="justify-self-start">Make Name</p>
           <p className="justify-self-center">Model ID</p>
@@ -33,7 +33,7 @@ const ListCarsComponent = async ({ makeId, year }: ListCarsProps) => {
 
         {data.Results.map((car, index) => (
           <li
-            className={cn("grid grid-cols-3 gap-10 items-center p-2.5", {
+            className={cn("grid grid-cols-3 items-center gap-10 p-2.5", {
               "bg-white-base": index % 2 !== 0,
             })}
             key={index}

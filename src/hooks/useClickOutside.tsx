@@ -1,7 +1,7 @@
 "use client";
 
-import { ROOT_ELEMENT } from "@/constants/rootElements";
 import { RefObject, useCallback, useEffect } from "react";
+import { ROOT_ELEMENT } from "@/constants/rootElements";
 
 export const useClickOutside = (
   ref: RefObject<HTMLElement>,

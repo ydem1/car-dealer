@@ -1,8 +1,8 @@
+import { instance } from "@/services/api-client";
+import { ListCars } from "@/page-components/result/ListCars";
+import { generateYearOptions } from "@/utils/generateYearOptions";
 import { IResponseData } from "@/@types/api";
 import { IMake } from "@/@types/make";
-import { ListCars } from "@/page-components/result/ListCars";
-import { instance } from "@/services/api-client";
-import { generateYearOptions } from "@/utils/generateYearOptions";
 
 export async function generateStaticParams() {
   const { data } = await instance.get<IResponseData<IMake[]>>(
