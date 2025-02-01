@@ -30,7 +30,7 @@ const Result = async ({
 }: {
   params: { makeId: string; year: string };
 }) => {
-  const { makeId, year } = params;
+  const { makeId, year } = await params;
 
   return (
     <section className="container py-20">

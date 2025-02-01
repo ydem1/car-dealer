@@ -14,6 +14,12 @@ const ListCarsComponent = async ({ makeId, year }: ListCarsProps) => {
     `/GetModelsForMakeIdYear/makeId/${makeId}/modelyear/${year}?format=json`
   );
 
+  const cars = data.Results;
+
+  if (cars.length === 0) {
+    return <p>Cars not found</p>;
+  }
+
   return (
     <div>
       <h2 className="text-2xl font-bold">{data.SearchCriteria}</h2>
@@ -43,7 +49,7 @@ const ListCarsComponent = async ({ makeId, year }: ListCarsProps) => {
 };
 
 export const ListCars: FC<ListCarsProps> = ({ makeId, year }) => (
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<p>Loading...</p>}>
     <ListCarsComponent makeId={makeId} year={year} />
   </Suspense>
 );
