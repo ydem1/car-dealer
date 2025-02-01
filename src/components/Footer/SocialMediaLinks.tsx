@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SOCIAL_MEDIA_LINKS } from "./constants";
 
 export const SocialMediaLinks = () => (
@@ -11,7 +12,7 @@ export const SocialMediaLinks = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <span>{icon}</span>
+            <Image src={icon as string} alt="icon" width={24} />
           </a>
         </li>
       ))}
