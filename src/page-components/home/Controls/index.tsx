@@ -27,10 +27,12 @@ export const Controls: FC<Props> = ({ cars }) => {
 
   const isDisabled = !makeIdOption || !yearOption;
 
-  const hrefResult = !isDisabled ? getItemPath(PATHNAMES.RESULT, {
-    makeId: makeIdOption?.value,
-    year: yearOption?.value,
-  }) : "";
+  const hrefResult = !isDisabled
+    ? getItemPath(PATHNAMES.RESULT, {
+        makeId: makeIdOption?.value,
+        year: yearOption?.value,
+      })
+    : "";
 
   const handleReset = () => {
     setYearOption(null);
