@@ -1,6 +1,7 @@
 import { IResponseData } from "@/@types/api";
 import { ICar } from "@/@types/car";
 import { IMake } from "@/@types/make";
+import { ListCars } from "@/page-components/result/ListCars";
 import { instance } from "@/services/api-client";
 import { generateYearOptions } from "@/utils/generateYearOptions";
 
@@ -38,16 +39,8 @@ const Result = async ({
 
   return (
     <section className="container py-20">
-      <h2 className="text-2xl font-bold">
-        Результати для Make ID: {makeId}, Рік: {year}
-        {data.Results.map((car, index) => (
-          <div key={index}>
-            <div>{car.Make_Name}</div>
-            <div>{car.Model_ID}</div>
-            <div>{car.Model_Name}</div>
-          </div>
-        ))}
-      </h2>
+      <h2 className="text-2xl font-bold">{data.SearchCriteria}</h2>
+      <ListCars cars={data.Results} />
     </section>
   );
 };

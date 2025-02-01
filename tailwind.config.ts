@@ -10,6 +10,7 @@ const config: Config = {
         },
         white: {
           base: "#ffff",
+          blue: "#F0F8FF",
         },
         gray: {
           base: "#636463",

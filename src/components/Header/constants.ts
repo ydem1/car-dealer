@@ -7,14 +7,4 @@ export const NAVIGATION_LINKS: ILink[] = [
     href: PATHNAMES.HOME,
     label: "Home",
   },
-  {
-    id: 2,
-    href: PATHNAMES.HOME,
-    label: "Filter",
-  },
-  {
-    id: 3,
-    href: PATHNAMES.HOME,
-    label: "Cars",
-  },
 ];
