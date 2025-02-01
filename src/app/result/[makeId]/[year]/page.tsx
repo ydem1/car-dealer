@@ -1,5 +1,4 @@
 import { IResponseData } from "@/@types/api";
-import { ICar } from "@/@types/car";
 import { IMake } from "@/@types/make";
 import { ListCars } from "@/page-components/result/ListCars";
 import { instance } from "@/services/api-client";
@@ -33,14 +32,9 @@ const Result = async ({
 }) => {
   const { makeId, year } = params;
 
-  const { data } = await instance.get<IResponseData<ICar[]>>(
-    `/GetModelsForMakeIdYear/makeId/${makeId}/modelyear/${year}?format=json`
-  );
-
   return (
     <section className="container py-20">
-      <h2 className="text-2xl font-bold">{data.SearchCriteria}</h2>
-      <ListCars cars={data.Results} />
+      <ListCars makeId={makeId} year={year} />
     </section>
   );
 };
